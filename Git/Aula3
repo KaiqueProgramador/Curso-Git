@@ -1,0 +1,68 @@
+Conectar projeto local ao remoto
+git remote add origin https://github.com/usuario/projeto.git
+
+
+Verificar:
+
+git remote -v
+Você verá algo assim:
+
+origin  https://github.com/usuario/projeto.git (fetch)
+origin  https://github.com/usuario/projeto.git (push)
+
+Enviar código (primeira vez)
+git branch -M main
+git push -u origin main
+
+
+Depois:
+
+git push
+
+Clonar projeto
+git clone https://github.com/usuario/projeto.git
+
+Atualizar projeto local
+git pull
+
+
+Regra do mercado:
+
+Sempre dê git pull antes de começar a codar
+
+
+
+Esses comandos você faz só uma vez por projeto:
+
+🔹 Conectar ao GitHub
+git remote add origin https://github.com/usuario/projeto.git
+
+
+👉 Liga o projeto local ao GitHub.
+
+🔹 Primeiro envio
+git branch -M main
+git push -u origin main
+
+
+👉 Define a branch principal e cria o vínculo com o remoto.
+
+🔁 Depois disso, no dia a dia
+
+Você só usa:
+
+git push
+
+
+Porque o Git já sabe:
+
+qual repositório (origin)
+
+qual branch (main)
+
+Fluxo padrão de trabalho (mercado)
+git pull
+# codar
+git add .
+git commit -m "feat: nova funcionalidade"
+git push

@@ -1,0 +1,85 @@
+Rebase (muito usado)
+git checkout feature-login
+git rebase main
+
+
+📌 Vantagem:
+
+Histórico mais limpo
+
+⚠️ Não usar rebase em branch compartilhada
+
+Stash (salvar trabalho temporário)
+git stash
+git stash pop
+
+Tags (versões)
+git tag v1.0.0
+git push origin v1.0.0
+
+v1.0.0 → primeira versão
+
+v1.1.0 → nova funcionalidade
+
+v2.0.0 → mudança grande
+
+Cherry-pick
+
+Pegar commit específico:
+
+git cherry-pick HASH_DO_COMMIT
+
+git log --oneline      # pega o hash
+git checkout main
+git cherry-pick HASH  # aplica
+
+Se der conflito
+
+Resolve no arquivo → git add . → git cherry-pick --continue
+Abrir o arquivo com conflito
+Vai aparecer algo assim:
+
+<<<<<<< HEAD
+código atual
+=======
+código do commit cherry-pick
+>>>>>>> HASH
+
+
+2️⃣ Escolher o código certo
+
+ficar com um
+
+ou juntar os dois
+
+3️⃣ Apagar os marcadores
+
+<<<<<<<
+=======
+>>>>>>>
+
+
+4️⃣ Salvar o arquivo
+
+5️⃣ Adicionar ao Git
+
+git add .
+
+
+6️⃣ Continuar o cherry-pick
+
+git cherry-pick --continue
+
+| Situação                | Comando                |
+| ----------------------- | ---------------------- |
+| Começar                 | `git cherry-pick HASH` |
+| Conflito resolvido      | `--continue`           |
+| Commit inútil/duplicado | `--skip`               |
+| Deu ruim, desistir      | `--abort`              |
+
+
+Reset (cuidado!)
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+
+❌ Nunca use --hard em branch compartilhada.

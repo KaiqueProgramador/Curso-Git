@@ -1,0 +1,52 @@
+Ver histórico
+git log
+git log --oneline
+
+Ver mudanças no arquivo
+git diff
+
+Desfazer antes do commit
+git restore arquivo.txt
+
+Tirar do staging
+git restore --staged arquivo.txt    (tira do add, staged é uma sequência para o commit)
+
+Alterar último commit
+git commit --amend
+
+
+⚠️ Só use se ainda NÃO enviou para o remoto.
+
+.gitignore (muito usado)
+
+Criar arquivo:
+
+.gitignore         ( usa o nano, nano .gitignore, e coloca o arquivo lá) (Se já deu git add, precisa remover do Git antes)
+(Só funciona para arquivos ainda NÃO adicionados) (O arquivo NÃO pode estar no git add (staged)
+nem já ter sido versionado antes.)
+
+Se já foi adicionado sem querer
+
+Faça assim:
+
+git rm --cached arquivo.txt
+
+
+Isso:
+
+Tira o arquivo do Git
+
+Mantém o arquivo no seu computador
+
+Depois:
+
+git commit -m "chore: remove arquivo do git"
+
+Exemplo:
+
+node_modules/
+.env
+__pycache__/
+*.log
+
+

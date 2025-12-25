@@ -1,0 +1,36 @@
+Instalação
+sudo apt install git
+
+Configuração inicial (obrigatório no mercado)
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+
+
+Verificar:
+
+git config --list
+
+Criando um repositório
+git init
+
+
+📁 Isso cria a pasta .git (NUNCA mexa nela).
+
+🔹 Ciclo básico do Git
+Arquivo → Staging → Commit
+
+Comandos essenciais
+git status        # Ver status
+git add .         # Adicionar arquivos
+git commit -m "mensagem"
+
+
+✅ Padrão de mensagem (mercado):
+
+git commit -m "feat: cria tela de login"
+
+feat: cria tela de login        # funcionalidade nova
+fix: corrige erro no cadastro   # bug
+chore: remove arquivo do git    # manutenção
+docs: atualiza README           # documentação
+
